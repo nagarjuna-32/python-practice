@@ -1,0 +1,9 @@
+import numpy as np
+
+arr = np.array([[1, 9, 3],
+                [4, 2, 8]])
+
+row_max = arr.max(axis=1).reshape(-1, 1)
+
+arr[arr == row_max] = 0
+print(arr)
